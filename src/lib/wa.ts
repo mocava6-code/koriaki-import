@@ -75,6 +75,13 @@ export const waContact = waUrl(
   "Hola KORIAKI IMPORT 👋 Quisiera recibir información sobre sus kits de conversión y accesorios disponibles."
 );
 
+export function waContactFor(phone: string): string {
+  return waUrl(
+    "Hola KORIAKI IMPORT 👋 Quisiera recibir información sobre sus kits de conversión y accesorios disponibles.",
+    phone
+  );
+}
+
 // ─── Vehicle Selector ──────────────────────────────────────────────────────
 
 export interface VehicleQuoteParams {

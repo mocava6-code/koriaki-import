@@ -1,4 +1,5 @@
-import { waContact } from "@/lib/wa";
+import { waContactFor } from "@/lib/wa";
+import { representatives } from "@/lib/representatives";
 import { WhatsAppIcon } from "./Icons";
 
 const reasons = [
@@ -107,15 +108,25 @@ export function WhyKoriaki() {
                 precio de importación directo — sin formularios, sin esperas.
               </p>
             </div>
-            <a
-              href={waContact}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex shrink-0 items-center gap-2.5 rounded-full bg-gradient-to-r from-accent to-accent-soft px-8 py-4 font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/25 transition-all hover:scale-105 hover:shadow-accent/40"
-            >
-              <WhatsAppIcon className="h-5 w-5" />
-              Solicitar Cotización
-            </a>
+            <div className="shrink-0 text-center">
+              <p className="mb-3 font-cond text-sm font-bold uppercase tracking-widest text-white">
+                Solicitar cotización
+              </p>
+              <div className="flex flex-wrap justify-center gap-3">
+                {[representatives.ford, representatives.toyota].map((representative) => (
+                  <a
+                    key={representative.id}
+                    href={waContactFor(representative.phone)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-w-32 items-center justify-center gap-2.5 rounded-full bg-gradient-to-r from-accent to-accent-soft px-6 py-3.5 font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/25 transition-all hover:scale-105 hover:shadow-accent/40"
+                  >
+                    <WhatsAppIcon className="h-5 w-5" />
+                    {representative.name}
+                  </a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
 
