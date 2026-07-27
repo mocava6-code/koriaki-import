@@ -4,7 +4,7 @@ import { representatives } from "@/lib/representatives";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-[100svh] overflow-hidden sm:min-h-[90svh]">
+    <section id="top" className="relative min-h-[44rem] overflow-hidden sm:min-h-[90svh]">
       {/* Full-bleed background photo */}
       <Image
         src="/img/hero-night.jpg"
@@ -24,7 +24,7 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-24 left-1/4 h-[520px] w-[780px] rounded-full bg-accent/12 blur-[180px]" />
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-[320px] w-[500px] rounded-full bg-accent/8 blur-[140px]" />
 
-      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-24 pt-24 sm:min-h-[90svh] sm:px-8 sm:pb-20 sm:pt-32">
+      <div className="relative mx-auto flex min-h-[44rem] max-w-7xl flex-col justify-start px-5 pb-14 pt-24 sm:min-h-[90svh] sm:justify-center sm:px-8 sm:pb-20 sm:pt-32">
         <div className="max-w-[56rem]">
 
           {/* Eyebrow badge */}
