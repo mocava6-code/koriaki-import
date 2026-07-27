@@ -11,7 +11,7 @@ export function Trust() {
     <section className="border-y border-white/10 bg-steel/40">
       <div className="mx-auto grid max-w-7xl grid-cols-2 gap-px bg-white/8 sm:grid-cols-5">
         {items.map((it) => (
-          <div key={it.t} className="flex flex-col items-center gap-2.5 bg-steel/40 px-5 py-7 text-center sm:flex-row sm:items-start sm:text-left sm:gap-3 sm:px-6">
+          <div key={it.t} className="flex flex-col items-center gap-2 bg-steel/40 px-3 py-5 text-center sm:flex-row sm:items-start sm:gap-3 sm:px-6 sm:py-7 sm:text-left">
             <svg
               viewBox="0 0 24 24"
               className="h-5 w-5 shrink-0 text-accent sm:mt-0.5"

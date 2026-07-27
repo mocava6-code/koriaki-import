@@ -4,7 +4,7 @@ import { representatives } from "@/lib/representatives";
 
 export function Hero() {
   return (
-    <section id="top" className="relative min-h-[90svh] overflow-hidden">
+    <section id="top" className="relative min-h-[100svh] overflow-hidden sm:min-h-[90svh]">
       {/* Full-bleed background photo */}
       <Image
         src="/img/hero-night.jpg"
@@ -13,7 +13,7 @@ export function Hero() {
         priority
         quality={90}
         sizes="100vw"
-        className="object-cover"
+        className="object-cover object-[62%_center] sm:object-center"
       />
 
       {/* Layered overlays for depth and legibility */}
@@ -24,18 +24,18 @@ export function Hero() {
       <div className="pointer-events-none absolute -top-24 left-1/4 h-[520px] w-[780px] rounded-full bg-accent/12 blur-[180px]" />
       <div className="pointer-events-none absolute bottom-0 right-1/4 h-[320px] w-[500px] rounded-full bg-accent/8 blur-[140px]" />
 
-      <div className="relative mx-auto flex min-h-[90svh] max-w-7xl flex-col justify-center px-5 pb-20 pt-32 sm:px-8">
+      <div className="relative mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-center px-5 pb-24 pt-24 sm:min-h-[90svh] sm:px-8 sm:pb-20 sm:pt-32">
         <div className="max-w-[56rem]">
 
           {/* Eyebrow badge */}
-          <div className="reveal inline-flex items-center gap-2.5 rounded-full border border-accent/25 bg-accent/8 px-5 py-2 text-xs font-semibold tracking-widest text-accent uppercase backdrop-blur">
+          <div className="reveal inline-flex items-center gap-2 rounded-full border border-accent/25 bg-black/35 px-3.5 py-1.5 text-[10px] font-semibold uppercase tracking-[0.16em] text-accent backdrop-blur sm:gap-2.5 sm:bg-accent/8 sm:px-5 sm:py-2 sm:text-xs sm:tracking-widest">
             <span className="h-1.5 w-1.5 animate-pulse rounded-full bg-accent" />
             Importación directa · Toyota y Ford · Stock en Lima
           </div>
 
           {/* Main headline */}
           <h1
-            className="reveal font-display uppercase text-balance mt-7 text-[3.25rem] leading-[0.92] sm:text-[5rem] lg:text-[6.5rem]"
+            className="reveal font-display uppercase text-balance mt-5 text-[2.65rem] leading-[0.9] sm:mt-7 sm:text-[5rem] lg:text-[6.5rem]"
             style={{ animationDelay: "60ms" }}
           >
             Transforma tu{" "}
@@ -51,17 +51,20 @@ export function Hero() {
 
           {/* Supporting copy */}
           <p
-            className="reveal text-balance mt-7 max-w-2xl text-base leading-relaxed text-white/75 sm:text-lg sm:leading-loose"
+            className="reveal text-balance mt-5 max-w-[34rem] text-sm leading-relaxed text-white/75 sm:mt-7 sm:max-w-2xl sm:text-lg sm:leading-loose"
             style={{ animationDelay: "120ms" }}
           >
-            Kits de conversión completos, faros LED, parachoques y accesorios
-            exteriores premium. Cada pieza importada directamente — compatibilidad
-            garantizada por modelo, versión y año.
+            Kits de conversión y accesorios premium para Toyota y Ford, con
+            compatibilidad verificada y stock en Lima.
+            <span className="hidden sm:inline">
+              {" "}Cada pieza es importada directamente y revisada por modelo,
+              versión y año.
+            </span>
           </p>
 
           {/* Conversion pills */}
           <div
-            className="reveal mt-6 flex flex-wrap gap-2.5"
+            className="reveal mt-6 hidden flex-wrap gap-2.5 sm:flex"
             style={{ animationDelay: "160ms" }}
           >
             {[
@@ -80,11 +83,12 @@ export function Hero() {
 
           {/* CTAs */}
           <div
-            className="reveal mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end"
+            id="cotizar"
+            className="reveal scroll-mt-24 mt-7 flex flex-col items-start gap-4 sm:mt-10 sm:flex-row sm:items-end"
             style={{ animationDelay: "200ms" }}
           >
             <div>
-              <p className="mb-3 font-cond text-sm font-bold uppercase tracking-widest text-white">
+              <p className="mb-2.5 font-cond text-xs font-bold uppercase tracking-widest text-white/80 sm:mb-3 sm:text-sm sm:text-white">
                 Solicitar cotización
               </p>
               <div className="flex flex-wrap gap-3">
@@ -94,7 +98,7 @@ export function Hero() {
                     href={waHeroFor(representative.phone)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex min-w-32 items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-soft px-7 py-4 text-center font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/30 transition-all hover:scale-105 hover:shadow-accent/50 sm:text-base"
+                    className="inline-flex min-w-28 items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-soft px-6 py-3.5 text-center font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/30 transition-all hover:scale-105 hover:shadow-accent/50 sm:min-w-32 sm:px-7 sm:py-4 sm:text-base"
                   >
                     {representative.name}
                   </a>
@@ -103,7 +107,7 @@ export function Hero() {
             </div>
             <a
               href="#catalogo"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-8 py-4 text-center text-sm font-semibold text-white backdrop-blur transition-all hover:border-white/40 hover:bg-white/15"
+              className="inline-flex items-center justify-center gap-2 px-1 py-2 text-center text-xs font-semibold text-white/65 transition-colors hover:text-white sm:rounded-full sm:border sm:border-white/20 sm:bg-white/8 sm:px-8 sm:py-4 sm:text-sm sm:text-white sm:backdrop-blur sm:hover:border-white/40 sm:hover:bg-white/15"
             >
               Explorar catálogo
               <svg viewBox="0 0 24 24" className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth="2">
@@ -114,7 +118,7 @@ export function Hero() {
 
           {/* Social proof stats */}
           <div
-            className="reveal mt-14 grid max-w-lg grid-cols-3 gap-6 border-t border-white/12 pt-8"
+            className="reveal mt-14 hidden max-w-lg grid-cols-3 gap-6 border-t border-white/12 pt-8 sm:grid"
             style={{ animationDelay: "280ms" }}
           >
             {[

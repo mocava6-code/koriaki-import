@@ -31,12 +31,12 @@ export function Products() {
   const hasFilter = filter.category !== null || filter.model !== null;
 
   return (
-    <section id="catalogo" className="relative mx-auto max-w-7xl scroll-mt-24 px-5 py-28 sm:px-8">
+    <section id="catalogo" className="relative mx-auto max-w-7xl scroll-mt-20 px-4 py-16 sm:scroll-mt-24 sm:px-8 sm:py-24 lg:py-28">
 
       {/* Section header */}
       <div className="max-w-2xl">
         <p className="eyebrow text-xs text-accent">Catálogo</p>
-        <h2 className="font-display uppercase text-balance mt-4 text-4xl sm:text-5xl lg:text-6xl">
+        <h2 className="font-display uppercase text-balance mt-3 text-3xl sm:mt-4 sm:text-5xl lg:text-6xl">
           Kits de conversión y accesorios
         </h2>
         <p className="mt-5 max-w-xl text-base leading-relaxed text-white/60">
@@ -137,7 +137,7 @@ function CategoryBlock({
       </div>
 
       {/* Product cards grid */}
-      <div className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-6 grid gap-4 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
         {cat.products.map((p, i) => (
           <article
             key={p.slug}
@@ -146,7 +146,7 @@ function CategoryBlock({
             {/* Product image */}
             <button
               onClick={() => openLightbox(slides, i)}
-              className="relative block aspect-[4/3] w-full overflow-hidden"
+              className="relative block aspect-[4/3] w-full overflow-hidden sm:aspect-[4/3]"
               aria-label={`Ver ${p.name}`}
             >
               <Image
@@ -182,7 +182,7 @@ function CategoryBlock({
             </button>
 
             {/* Card body */}
-            <div className="flex flex-1 flex-col gap-4 p-6">
+            <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
               <div>
                 <h4 className="text-base font-bold leading-snug text-white">{p.name}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-white/55">{p.desc}</p>

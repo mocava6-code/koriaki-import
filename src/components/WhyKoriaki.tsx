@@ -65,12 +65,12 @@ export function WhyKoriaki() {
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-1/2 top-1/2 h-[700px] w-[700px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-accent/5 blur-[200px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-28 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24 lg:py-28">
 
         {/* Header */}
         <div className="mx-auto max-w-2xl text-center">
           <p className="eyebrow text-xs text-accent">¿Por qué elegirnos?</p>
-          <h2 className="font-display uppercase text-balance mt-4 text-4xl sm:text-5xl lg:text-6xl">
+          <h2 className="font-display uppercase text-balance mt-3 text-3xl sm:mt-4 sm:text-5xl lg:text-6xl">
             Por qué confiar en KORIAKI IMPORT
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-base leading-relaxed text-white/60">
@@ -80,11 +80,11 @@ export function WhyKoriaki() {
         </div>
 
         {/* Reasons grid */}
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-9 grid gap-3 sm:mt-14 sm:grid-cols-2 sm:gap-5 lg:grid-cols-3">
           {reasons.map((r) => (
             <div
               key={r.title}
-              className="group rounded-3xl border border-white/10 bg-white/[0.03] p-7 transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.05]"
+              className="group rounded-2xl border border-white/10 bg-white/[0.03] p-5 transition-all duration-300 hover:border-accent/30 hover:bg-white/[0.05] sm:rounded-3xl sm:p-7"
             >
               <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 text-accent ring-1 ring-accent/20 transition-all group-hover:from-accent/30 group-hover:ring-accent/35">
                 {r.icon}
@@ -96,11 +96,11 @@ export function WhyKoriaki() {
         </div>
 
         {/* Bottom CTA strip */}
-        <div className="mt-14 overflow-hidden rounded-3xl border border-accent/20 bg-gradient-to-r from-accent/10 via-steel to-steel p-9 sm:p-12">
+        <div className="mt-10 overflow-hidden rounded-2xl border border-accent/20 bg-gradient-to-r from-accent/10 via-steel to-steel p-5 sm:mt-14 sm:rounded-3xl sm:p-12">
           <div className="flex flex-col items-center gap-6 text-center sm:flex-row sm:justify-between sm:text-left">
             <div className="max-w-xl">
               <p className="eyebrow text-xs text-accent">Sin compromiso</p>
-              <h3 className="font-display uppercase mt-3 text-2xl sm:text-3xl">
+              <h3 className="font-display uppercase mt-3 text-xl sm:text-3xl">
                 Cotiza gratis, sin obligación de compra
               </h3>
               <p className="mt-3 text-sm leading-relaxed text-white/60">

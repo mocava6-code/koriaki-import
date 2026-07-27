@@ -12,7 +12,6 @@ const links = [
 ];
 
 export function Nav() {
-  const [open, setOpen]       = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
@@ -39,7 +38,7 @@ export function Nav() {
         </div>
       )}
 
-      <nav className="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 py-2 sm:px-8">
+      <nav className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 py-2 sm:px-8 md:h-20">
         <a href="#top" className="group">
           <Logo size="lg" />
         </a>
@@ -65,45 +64,13 @@ export function Nav() {
           </a>
         </div>
 
-        {/* Mobile menu toggle */}
-        <button
-          onClick={() => setOpen((v) => !v)}
-          className="md:hidden grid h-10 w-10 place-items-center rounded-xl border border-white/15 bg-white/5 transition-colors hover:bg-white/10"
-          aria-label="Menú"
+        <a
+          href="#cotizar"
+          className="rounded-full border border-accent/35 bg-accent/10 px-4 py-2 font-cond text-xs font-bold uppercase tracking-wide text-accent md:hidden"
         >
-          <div className="space-y-1.5">
-            <span className={`block h-0.5 w-5 bg-white/80 transition-all duration-200 ${open ? "translate-y-2 rotate-45" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-white/80 transition-all duration-200 ${open ? "opacity-0" : ""}`} />
-            <span className={`block h-0.5 w-5 bg-white/80 transition-all duration-200 ${open ? "-translate-y-2 -rotate-45" : ""}`} />
-          </div>
-        </button>
+          Cotizar
+        </a>
       </nav>
-
-      {/* Mobile drawer */}
-      {open && (
-        <div className="border-t border-white/10 bg-background/95 px-5 py-5 backdrop-blur-md md:hidden">
-          <div className="flex flex-col gap-1">
-            {links.map((l) => (
-              <a
-                key={l.href}
-                href={l.href}
-                onClick={() => setOpen(false)}
-                className="rounded-xl px-4 py-3 text-sm font-medium text-white/75 transition-colors hover:bg-white/5 hover:text-white"
-              >
-                {l.label}
-              </a>
-            ))}
-            <a
-              href={waQuote}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="mt-3 rounded-xl bg-gradient-to-r from-accent to-accent-soft px-4 py-3.5 text-center text-sm font-bold text-black shadow-lg shadow-accent/20"
-            >
-              Cotizar por WhatsApp
-            </a>
-          </div>
-        </div>
-      )}
     </header>
   );
 }

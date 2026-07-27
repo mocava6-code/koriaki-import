@@ -31,8 +31,8 @@ export function VehicleSelector() {
   const other  = selectorModels.filter((m) => m.brand === null);
 
   return (
-    <section className="relative z-20 mx-auto -mt-16 max-w-5xl px-5 sm:px-8">
-      <div className="overflow-hidden rounded-3xl border border-white/12 bg-steel/90 p-6 shadow-2xl shadow-black/50 backdrop-blur sm:p-8">
+    <section id="vehiculo" className="relative z-20 mx-auto max-w-5xl scroll-mt-20 px-4 pt-6 sm:-mt-16 sm:px-8 sm:pt-0">
+      <div className="overflow-hidden rounded-2xl border border-white/12 bg-steel/90 p-5 shadow-2xl shadow-black/50 backdrop-blur sm:rounded-3xl sm:p-8">
 
         {/* Header */}
         <div className="flex items-center gap-2">
@@ -42,12 +42,12 @@ export function VehicleSelector() {
         <h2 className="font-display uppercase mt-2 text-2xl sm:text-3xl">
           Encuentra productos para tu vehículo
         </h2>
-        <p className="mt-1.5 text-sm text-white/55">
+        <p className="mt-1.5 text-xs leading-relaxed text-white/55 sm:text-sm">
           Selecciona tu modelo y año — te mostramos solo los productos 100% compatibles.
         </p>
 
         {/* Selectors */}
-        <div className="mt-5 grid gap-4 sm:grid-cols-3">
+        <div className="mt-5 grid gap-3 sm:grid-cols-3 sm:gap-4">
           <Field label="Marca y modelo" hint="Toyota o Ford">
             <select
               value={modelLabel}
@@ -91,7 +91,7 @@ export function VehicleSelector() {
         <div className="mt-5 flex flex-col gap-3 sm:flex-row">
           <button
             onClick={verCatalogo}
-            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-soft px-6 py-4 font-cond text-base font-bold uppercase tracking-wide text-black shadow-lg shadow-accent/20 transition-all hover:scale-[1.02] hover:shadow-accent/35"
+            className="flex flex-1 items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-accent to-accent-soft px-5 py-3.5 font-cond text-sm font-bold uppercase tracking-wide text-black shadow-lg shadow-accent/20 transition-all hover:scale-[1.02] hover:shadow-accent/35 sm:px-6 sm:py-4 sm:text-base"
           >
             Ver productos compatibles <ArrowRight className="h-5 w-5" />
           </button>
@@ -99,14 +99,14 @@ export function VehicleSelector() {
             href={waHref}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-4 font-cond text-base font-bold uppercase tracking-wide text-white transition-colors hover:border-white/30 hover:bg-white/10"
+            className="hidden items-center justify-center gap-2 rounded-xl border border-white/15 bg-white/5 px-6 py-4 font-cond text-base font-bold uppercase tracking-wide text-white transition-colors hover:border-white/30 hover:bg-white/10 sm:flex"
           >
             <WhatsAppIcon className="h-5 w-5" /> Cotizar por WhatsApp
           </a>
         </div>
 
         {/* Footer note */}
-        <p className="mt-3 text-center text-xs text-white/45">
+        <p className="mt-3 text-center text-[11px] leading-relaxed text-white/45 sm:text-xs">
           Compatibilidad verificada por modelo y año · Atención Lun–Sáb 9 a.m.–6 p.m.
         </p>
       </div>

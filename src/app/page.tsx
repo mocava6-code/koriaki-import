@@ -13,12 +13,13 @@ import { About } from "@/components/About";
 import { Contact } from "@/components/Contact";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFab } from "@/components/WhatsAppFab";
+import { MobileBottomNav } from "@/components/MobileBottomNav";
 
 export default function Home() {
   return (
     <Providers>
       <Nav />
-      <main className="flex-1">
+      <main className="flex-1 pb-20 md:pb-0">
         {/* 1. Hero — first impression, brand identity */}
         <Hero />
 
@@ -26,7 +27,7 @@ export default function Home() {
         <VehicleSelector />
 
         {/* 3. Trust bar — quick credibility signals */}
-        <div className="mt-20">
+        <div className="mt-12 sm:mt-20">
           <Trust />
         </div>
 
@@ -43,23 +44,23 @@ export default function Home() {
         <Products />
 
         {/* 8. Full catalogue CTA banner */}
-        <section className="mx-auto max-w-7xl px-5 sm:px-8">
-          <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-gradient-to-r from-accent/20 via-steel to-steel p-8 sm:p-12">
+        <section className="mx-auto max-w-7xl px-4 sm:px-8">
+          <div className="relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-r from-accent/20 via-steel to-steel p-6 sm:rounded-3xl sm:p-12">
             <div className="pointer-events-none absolute -right-10 -top-10 h-48 w-48 rounded-full bg-accent/25 blur-3xl" />
             <div className="relative flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
               <div>
                 <p className="eyebrow text-xs text-accent">Catálogo completo</p>
-                <h3 className="font-display uppercase mt-2 text-3xl sm:text-4xl">
+                <h3 className="font-display uppercase mt-2 text-2xl sm:text-4xl">
                   Explora todos nuestros productos
                 </h3>
-                <p className="mt-2 max-w-xl text-white/60">
+                <p className="mt-2 max-w-xl text-sm leading-relaxed text-white/60 sm:text-base">
                   Busca por modelo, categoría o nombre. Solicita una cotización
                   personalizada por WhatsApp en segundos.
                 </p>
               </div>
               <a
                 href="/tienda"
-                className="shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-soft px-8 py-4 font-cond text-base font-bold uppercase tracking-wide text-black shadow-lg shadow-accent/20 transition-all hover:scale-105 hover:shadow-accent/35"
+                className="w-full shrink-0 rounded-full bg-gradient-to-r from-accent to-accent-soft px-7 py-3.5 text-center font-cond text-sm font-bold uppercase tracking-wide text-black shadow-lg shadow-accent/20 transition-all hover:scale-105 hover:shadow-accent/35 sm:w-auto sm:px-8 sm:py-4 sm:text-base"
               >
                 Ver catálogo →
               </a>
@@ -81,6 +82,7 @@ export default function Home() {
       </main>
       <Footer />
       <WhatsAppFab />
+      <MobileBottomNav />
     </Providers>
   );
 }

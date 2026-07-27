@@ -5,7 +5,7 @@ import { waGeneral } from "@/lib/wa";
 export function Footer() {
   return (
     <footer className="border-t border-white/10 bg-background">
-      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-8 px-5 py-12 sm:flex-row sm:gap-6 sm:px-8">
+      <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-6 px-4 py-9 sm:flex-row sm:gap-6 sm:px-8 sm:py-12">
         <Logo size="sm" />
 
         <p className="text-center text-xs leading-relaxed text-white/40">

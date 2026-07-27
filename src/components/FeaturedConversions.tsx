@@ -41,37 +41,37 @@ export function FeaturedConversions() {
       {/* Ambient glow */}
       <div className="pointer-events-none absolute left-0 top-1/2 h-[600px] w-[500px] -translate-y-1/2 rounded-full bg-accent/6 blur-[180px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-28 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24 lg:py-28">
 
         {/* Header */}
         <div className="flex flex-col items-start justify-between gap-6 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <p className="eyebrow text-xs text-accent">Conversiones destacadas</p>
-            <h2 className="font-display uppercase text-balance mt-4 text-4xl sm:text-5xl lg:text-6xl">
+            <h2 className="font-display uppercase text-balance mt-3 text-3xl sm:mt-4 sm:text-5xl lg:text-6xl">
               ¿Cómo puede quedar tu vehículo?
             </h2>
-            <p className="mt-4 max-w-lg text-base leading-relaxed text-white/60">
+            <p className="mt-3 max-w-lg text-sm leading-relaxed text-white/60 sm:mt-4 sm:text-base">
               Estos son nuestros kits más populares. Cada transformación usa piezas
               importadas directamente — compatibilidad garantizada por modelo y año.
             </p>
           </div>
           <a
             href="#catalogo"
-            className="shrink-0 rounded-full border border-white/20 bg-white/5 px-6 py-3 text-sm font-semibold text-white/80 transition-all hover:border-accent/40 hover:bg-white/10 hover:text-white"
+            className="shrink-0 text-sm font-semibold text-accent/80 transition-colors hover:text-accent sm:rounded-full sm:border sm:border-white/20 sm:bg-white/5 sm:px-6 sm:py-3 sm:text-white/80 sm:hover:border-accent/40 sm:hover:bg-white/10 sm:hover:text-white"
           >
             Ver catálogo completo →
           </a>
         </div>
 
         {/* Cards */}
-        <div className="mt-12 grid gap-6 lg:grid-cols-3">
+        <div className="mt-8 grid gap-5 sm:mt-12 sm:gap-6 lg:grid-cols-3">
           {conversions.map((c) => (
             <article
               key={c.slug}
-              className="group flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/35 hover:shadow-2xl hover:shadow-accent/10"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/35 hover:shadow-2xl hover:shadow-accent/10 sm:rounded-3xl"
             >
               {/* Image */}
-              <div className="relative aspect-[16/10] overflow-hidden">
+              <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
                 <Image
                   src={c.image}
                   alt={`Kit conversión ${c.label}`}
@@ -100,12 +100,12 @@ export function FeaturedConversions() {
               </div>
 
               {/* Body */}
-              <div className="flex flex-1 flex-col gap-5 p-6">
+              <div className="flex flex-1 flex-col gap-4 p-5 sm:gap-5 sm:p-6">
                 <div>
                   <h3 className="font-display uppercase text-xl leading-tight text-white">
                     {c.label}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-white/60">{c.desc}</p>
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-white/60 sm:mt-3 sm:line-clamp-none">{c.desc}</p>
                 </div>
 
                 {/* Compatibility */}

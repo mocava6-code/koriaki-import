@@ -31,7 +31,7 @@ export function WhatsAppFab() {
   const visible = showTooltip && !dismissed;
 
   return (
-    <div className="fixed bottom-5 right-5 z-50 flex flex-col items-end gap-2">
+    <div className="fixed bottom-5 right-5 z-50 hidden flex-col items-end gap-2 md:flex">
 
       {/* Tooltip bubble */}
       {visible && (

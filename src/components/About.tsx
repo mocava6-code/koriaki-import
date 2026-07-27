@@ -14,13 +14,13 @@ export function About() {
       {/* Background accent */}
       <div className="pointer-events-none absolute right-0 top-0 h-[500px] w-[500px] rounded-full bg-accent/5 blur-[160px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-28 sm:px-8">
-        <div className="grid items-center gap-14 lg:grid-cols-2 lg:gap-20">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24 lg:py-28">
+        <div className="grid items-center gap-9 sm:gap-14 lg:grid-cols-2 lg:gap-20">
 
           {/* Left — copy */}
           <div>
             <p className="eyebrow text-xs text-accent">Quiénes somos</p>
-            <h2 className="font-display uppercase text-balance mt-4 text-5xl sm:text-6xl lg:text-7xl">
+            <h2 className="font-display uppercase text-balance mt-3 text-3xl sm:mt-4 sm:text-6xl lg:text-7xl">
               KORIAKI IMPORT
             </h2>
             <p className="mt-6 text-base leading-relaxed text-white/65">

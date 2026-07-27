@@ -8,22 +8,22 @@ export function Contact() {
       <div className="pointer-events-none absolute inset-0 grain opacity-40" />
       <div className="pointer-events-none absolute left-1/2 top-0 h-72 w-[700px] -translate-x-1/2 rounded-full bg-accent/15 blur-[120px]" />
 
-      <div className="relative mx-auto max-w-4xl px-5 py-24 text-center sm:px-8">
+      <div className="relative mx-auto max-w-4xl px-4 py-16 text-center sm:px-8 sm:py-24">
         <p className="eyebrow text-xs text-accent">Contacto</p>
-        <h2 className="font-display uppercase text-balance mx-auto mt-3 max-w-3xl text-4xl sm:text-6xl">
+        <h2 className="font-display uppercase text-balance mx-auto mt-3 max-w-3xl text-3xl sm:text-6xl">
           ¿Buscas piezas para tu Toyota o Ford?
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-white/65">
+        <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/65 sm:mt-4 sm:text-base">
           Escríbenos para consultar disponibilidad, compatibilidad con tu modelo
           y obtener una cotización personalizada.
         </p>
 
-        <div className="mt-9 flex flex-col items-center justify-center gap-3 sm:flex-row">
+        <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:mt-9 sm:flex-row sm:items-center">
           <a
             href={waContact}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-bold text-black transition-transform hover:scale-105"
+            className="inline-flex items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 py-3.5 text-sm font-bold text-black transition-transform hover:scale-105"
           >
             <WhatsAppIcon className="h-5 w-5" />
             Solicitar cotización
@@ -36,7 +36,7 @@ export function Contact() {
           </a>
         </div>
 
-        <div className="mt-12 grid gap-4 sm:grid-cols-3">
+        <div className="mt-9 grid gap-3 sm:mt-12 sm:grid-cols-3 sm:gap-4">
           {[
             { label: "Teléfono", value: site.phone },
             { label: "Almacén", value: "Separadora Industrial, Ate" },

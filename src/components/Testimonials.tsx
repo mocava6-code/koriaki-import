@@ -49,13 +49,13 @@ export function Testimonials() {
       {/* Subtle background accent */}
       <div className="pointer-events-none absolute left-1/2 top-0 h-96 w-[900px] -translate-x-1/2 rounded-full bg-accent/6 blur-[160px]" />
 
-      <div className="relative mx-auto max-w-7xl px-5 py-28 sm:px-8">
+      <div className="relative mx-auto max-w-7xl px-4 py-16 sm:px-8 sm:py-24 lg:py-28">
 
         {/* Section header */}
         <div className="flex flex-col items-start justify-between gap-8 lg:flex-row lg:items-end">
           <div className="max-w-2xl">
             <p className="eyebrow text-xs text-accent">Reseñas verificadas</p>
-            <h2 className="font-display uppercase text-balance mt-4 text-4xl sm:text-5xl lg:text-6xl">
+            <h2 className="font-display uppercase text-balance mt-3 text-3xl sm:mt-4 sm:text-5xl lg:text-6xl">
               Lo que dicen nuestros clientes
             </h2>
             <p className="mt-4 max-w-lg text-base text-white/55">
@@ -65,8 +65,8 @@ export function Testimonials() {
           </div>
 
           {/* Rating badge */}
-          <div className="flex shrink-0 items-center gap-4 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-amber-400/10 to-transparent px-7 py-5">
-            <div className="font-display text-5xl leading-none text-amber-400">4.9</div>
+          <div className="flex shrink-0 items-center gap-3 rounded-2xl border border-amber-400/20 bg-gradient-to-br from-amber-400/10 to-transparent px-5 py-4 sm:gap-4 sm:px-7 sm:py-5">
+            <div className="font-display text-4xl leading-none text-amber-400 sm:text-5xl">4.9</div>
             <div>
               <Stars />
               <div className="mt-2 text-xs font-medium text-white/50">+180 reseñas verificadas</div>
@@ -75,7 +75,7 @@ export function Testimonials() {
         </div>
 
         {/* Review grid */}
-        <div className="mt-12 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid gap-4 sm:mt-12 sm:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {reviews.map((r) => (
             <figure
               key={r.name}
