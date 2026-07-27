@@ -58,6 +58,13 @@ export const waHero = waUrl(
   "Hola KORIAKI IMPORT 👋 Vi su catálogo y quisiera conocer disponibilidad y precios."
 );
 
+export function waHeroFor(phone: string): string {
+  return waUrl(
+    "Hola KORIAKI IMPORT 👋 Vi su catálogo y quisiera conocer disponibilidad y precios.",
+    phone
+  );
+}
+
 /** Gallery CTA — "Quiero el mío" */
 export const waGallery = waUrl(
   "Hola KORIAKI IMPORT 👋 Vi la galería y me interesa cotizar un kit para mi vehículo."

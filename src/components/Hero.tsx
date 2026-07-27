@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { waHero, waQuote } from "@/lib/wa";
+import { waHeroFor } from "@/lib/wa";
+import { representatives } from "@/lib/representatives";
 
 export function Hero() {
   return (
@@ -79,17 +80,27 @@ export function Hero() {
 
           {/* CTAs */}
           <div
-            className="reveal mt-10 flex flex-col gap-3 sm:flex-row"
+            className="reveal mt-10 flex flex-col items-start gap-4 sm:flex-row sm:items-end"
             style={{ animationDelay: "200ms" }}
           >
-            <a
-              href={waHero}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-accent to-accent-soft px-8 py-4 text-center font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/30 transition-all hover:scale-105 hover:shadow-accent/50 sm:text-base"
-            >
-              Solicitar Cotización
-            </a>
+            <div>
+              <p className="mb-3 font-cond text-sm font-bold uppercase tracking-widest text-white">
+                Solicitar cotización
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {[representatives.ford, representatives.toyota].map((representative) => (
+                  <a
+                    key={representative.id}
+                    href={waHeroFor(representative.phone)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex min-w-32 items-center justify-center rounded-full bg-gradient-to-r from-accent to-accent-soft px-7 py-4 text-center font-cond text-sm font-bold uppercase tracking-widest text-black shadow-xl shadow-accent/30 transition-all hover:scale-105 hover:shadow-accent/50 sm:text-base"
+                  >
+                    {representative.name}
+                  </a>
+                ))}
+              </div>
+            </div>
             <a
               href="#catalogo"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/8 px-8 py-4 text-center text-sm font-semibold text-white backdrop-blur transition-all hover:border-white/40 hover:bg-white/15"
