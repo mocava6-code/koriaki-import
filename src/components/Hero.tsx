@@ -69,8 +69,8 @@ export function Hero() {
           >
             {[
               "Hilux Revo → GR Sport III",
-              "Fortuner → Legender",
-              "Ranger → F150 R Style",
+              "Fortuner → Legender GR 2021",
+              "Ranger → F-150 R 2026",
             ].map((t) => (
               <span
                 key={t}

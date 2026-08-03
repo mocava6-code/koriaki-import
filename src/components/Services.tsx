@@ -74,8 +74,8 @@ export function Services() {
             <div className="flex shrink-0 flex-col gap-3">
               {[
                 { from: "Hilux",    to: "GR Sport"     },
-                { from: "Fortuner", to: "Legender"     },
-                { from: "Ranger",   to: "F150 R Style" },
+                { from: "Fortuner", to: "Legender GR"  },
+                { from: "Ranger",   to: "F-150 R 2026" },
               ].map((c) => (
                 <div key={c.to} className="flex items-center gap-3 text-sm font-semibold">
                   <span className="rounded-xl bg-white/10 px-4 py-2 text-white/80">{c.from}</span>
