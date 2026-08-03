@@ -91,11 +91,11 @@ export const categories: Category[] = [
     products: [
       {
         slug: "kit-hilux-gr-sport",
-        name: "Kit Conversión Hilux → GR Sport",
-        desc: "Kit completo de carrocería que transforma tu Hilux al estilo GR Sport: parrilla agresiva, parachoques deportivo, guardafangos ensanchados y emblemas.",
-        transforms: "Hilux → GR Sport",
+        name: "Kit Conversión Hilux Revo 2016+ → GR Sport III",
+        desc: "Body kit diseñado para convertir tu Hilux Revo 2016 en adelante al estilo GR Sport III, renovando su apariencia con un frente más moderno, deportivo e imponente.",
+        transforms: "Hilux Revo 2016+ → GR Sport III",
         tag: "DESTACADO",
-        image: "/img/raptor-bridge.jpg",
+        image: "/img/hilux-revo-gr-sport-iii.jpg",
         fits: ["Hilux"],
       },
       {

@@ -68,7 +68,7 @@ export function Hero() {
             style={{ animationDelay: "160ms" }}
           >
             {[
-              "Hilux → GR Sport",
+              "Hilux Revo → GR Sport III",
               "Fortuner → Legender",
               "Ranger → F150 R Style",
             ].map((t) => (
