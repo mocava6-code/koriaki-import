@@ -117,6 +117,11 @@ export function ProductDetail({ product }: { product: FlatProduct }) {
               <h1 className="font-display uppercase mt-2 text-3xl leading-[1.02] sm:text-4xl">
                 {product.name}
               </h1>
+              {product.sku && (
+                <p className="mt-2 font-mono text-xs uppercase tracking-widest text-white/40">
+                  SKU {product.sku}
+                </p>
+              )}
             </div>
 
             {/* Compatibility */}

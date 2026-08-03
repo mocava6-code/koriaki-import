@@ -5,14 +5,14 @@ import { BreadcrumbJsonLd } from "@/components/JsonLd";
 export const metadata: Metadata = {
   title: "Catálogo — Kits de Conversión y Accesorios 4x4 para Toyota y Ford",
   description:
-    "Catálogo KORIAKI IMPORT: kits de conversión Hilux GR Sport, Fortuner Legender, Ranger F150, faros LED, parachoques y guardafangos premium. Importación directa, stock en Lima. Solicita cotización por WhatsApp.",
+    "Catálogo KORIAKI IMPORT: kits de conversión Hilux GR Sport, Fortuner Legender, Ford Ranger y F-150, faros LED, parachoques, molduras y accesorios. Consulta disponibilidad por WhatsApp.",
   alternates: {
     canonical: "https://koriakiimport.com/tienda",
   },
   openGraph: {
     title: "Catálogo KORIAKI IMPORT — Kits de Conversión y Accesorios 4x4",
     description:
-      "Explora el catálogo completo de kits de conversión y accesorios exteriores para Toyota Hilux, Fortuner, Prado y Ford Ranger. Importación directa, stock en Lima.",
+      "Explora el catálogo completo de kits de conversión y accesorios para Toyota Hilux, Fortuner, Ford Ranger y F-150. Importación directa y productos en camino.",
     url: "https://koriakiimport.com/tienda",
     images: [
       {

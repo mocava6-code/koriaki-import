@@ -184,6 +184,11 @@ function CategoryBlock({
             {/* Card body */}
             <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
               <div>
+                {p.sku && (
+                  <p className="mb-2 font-mono text-[10px] uppercase tracking-widest text-white/35">
+                    SKU {p.sku}
+                  </p>
+                )}
                 <h4 className="text-base font-bold leading-snug text-white">{p.name}</h4>
                 <p className="mt-2 text-sm leading-relaxed text-white/55">{p.desc}</p>
               </div>

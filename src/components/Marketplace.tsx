@@ -13,11 +13,11 @@ const models: (Fit | "Todos")[] = [
   "Hilux",
   "Fortuner",
   "Fortuner Legender",
-  "Prado",
   "Revo",
   "Ranger",
   "Ranger Raptor",
   "F150",
+  "Silverado",
 ];
 
 export function Marketplace() {
@@ -29,7 +29,10 @@ export function Marketplace() {
     const q = query.trim().toLowerCase();
     return allProducts.filter((p) => {
       const matchQ =
-        !q || p.name.toLowerCase().includes(q) || p.desc.toLowerCase().includes(q);
+        !q ||
+        p.name.toLowerCase().includes(q) ||
+        p.desc.toLowerCase().includes(q) ||
+        p.sku?.toLowerCase().includes(q);
       const matchCat   = !cat   || p.categoryId === cat;
       const matchModel =
         model === "Todos" || p.fits.includes(model) || p.fits.includes("Universal");
@@ -60,7 +63,7 @@ export function Marketplace() {
             Kits de conversión, faros LED, parachoques, guardafangos y accesorios
             exteriores premium para Toyota y Ford.{" "}
             <span className="font-semibold text-white/80">
-              {allProducts.length} productos disponibles.
+              {allProducts.length} productos en catálogo.
             </span>{" "}
             Solicita cotización personalizada por WhatsApp.
           </p>
@@ -183,6 +186,11 @@ export function Marketplace() {
                 {/* Body */}
                 <div className="flex flex-1 flex-col gap-3 p-5">
                   <div>
+                    {p.sku && (
+                      <p className="mb-1.5 font-mono text-[10px] uppercase tracking-widest text-white/35">
+                        SKU {p.sku}
+                      </p>
+                    )}
                     <Link
                       href={`/tienda/${p.id}`}
                       className="text-sm font-bold leading-snug text-white transition-colors hover:text-accent"
