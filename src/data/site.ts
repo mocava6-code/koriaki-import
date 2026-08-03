@@ -120,7 +120,7 @@ export const categories: Category[] = [
         name: "Kit Actualización Ranger T6/T7/T8 → F-150 R 2026",
         desc: "Kit diseñado para transformar tu Ford Ranger 2012–2021, versiones T6, T7 o T8, al estilo F-150 R 2026, renovando el frente con una apariencia más moderna, robusta e imponente.",
         transforms: "Ranger 2012–2021 → F-150 R 2026",
-        image: "/img/raptor-orange.jpg",
+        image: "/img/ranger-f150-r-2026.jpg",
         fits: ["Ranger"],
       },
       {

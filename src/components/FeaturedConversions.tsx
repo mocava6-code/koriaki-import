@@ -29,7 +29,7 @@ const conversions = [
     to: "F-150 R 2026",
     label: "Ranger T6/T7/T8 → F-150 R 2026",
     desc: "Kit de actualización para transformar tu Ford Ranger 2012–2021, versiones T6, T7 o T8, al estilo F-150 R 2026. Renueva el frente y dale una presencia más moderna, robusta e imponente.",
-    image: "/img/raptor-sunset.jpg",
+    image: "/img/ranger-f150-r-2026.jpg",
     fits: ["Ranger T6/T7/T8 · 2012–2021"],
     tag: "Importación directa",
     slug: "kit-ranger-f150-style",
