@@ -100,11 +100,11 @@ export const categories: Category[] = [
       },
       {
         slug: "kit-hilux-raptor-style",
-        name: "Kit Conversión Hilux → Raptor Style",
-        desc: "Transforma tu Hilux con estética Raptor: parrilla, parachoques frontal y trasero, guardafangos y detalles negros mate.",
-        transforms: "Hilux → Raptor Style",
-        image: "/img/raptor-black.jpg",
-        fits: ["Hilux"],
+        name: "Kit Conversión F-150 XLT 2025 → Raptor 2026",
+        desc: "Kit de conversión diseñado para actualizar tu Ford F-150 XLT 2025 al estilo Raptor 2026, renovando su apariencia con un frente más agresivo, deportivo e imponente.",
+        transforms: "F-150 XLT 2025 → Raptor 2026",
+        image: "/img/f150-xlt-2025-raptor-2026.jpg",
+        fits: ["F150"],
       },
       {
         slug: "kit-fortuner-legender",
