@@ -112,7 +112,7 @@ export const categories: Category[] = [
         desc: "Kit de conversión diseñado para transformar tu Fortuner 2016–2020 al estilo Legender GR 2021, renovando el frente con una apariencia más moderna, deportiva y exclusiva.",
         transforms: "Fortuner 2016–2020 → Legender GR 2021",
         tag: "NUEVO",
-        image: "/img/tacoma-forest.jpg",
+        image: "/img/fortuner-legender-gr-2021.jpg",
         fits: ["Fortuner"],
       },
       {
