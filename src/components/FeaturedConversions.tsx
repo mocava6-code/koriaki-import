@@ -19,7 +19,6 @@ const conversions = [
     label: "Fortuner 2016–2020 → Legender GR 2021",
     desc: "Transforma tu Fortuner 2016–2020 al estilo Fortuner Legender GR 2021. Este kit de conversión actualiza el frente de tu SUV con una apariencia más moderna, deportiva y exclusiva.",
     image: "/img/fortuner-legender-gr-2021.jpg",
-    imageClass: "object-contain",
     fits: ["Fortuner 2016–2020"],
     tag: "Nuevo",
     slug: "kit-fortuner-legender",
@@ -72,14 +71,14 @@ export function FeaturedConversions() {
               className="group flex flex-col overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03] transition-all duration-300 hover:-translate-y-1.5 hover:border-accent/35 hover:shadow-2xl hover:shadow-accent/10 sm:rounded-3xl"
             >
               {/* Image */}
-              <div className="relative aspect-[4/3] overflow-hidden bg-black sm:aspect-[16/10]">
+              <div className="relative aspect-[4/3] overflow-hidden sm:aspect-[16/10]">
                 <Image
                   src={c.image}
                   alt={`Kit conversión ${c.label}`}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1280px) 50vw, 33vw"
                   quality={85}
-                  className={`${c.imageClass ?? "object-cover"} transition-transform duration-500 group-hover:scale-105`}
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
 
